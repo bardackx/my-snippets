@@ -33,5 +33,5 @@ because then you touch all the friend groups in `F`.
 1. Initialize `A` as `{}` and `G` as `{}`.
 2. While `A` doesn't satisfy the condition:
    1. Find the `p` from `P - A` that is in the most `f` from `F - G`.
-   2. Add `p` to `A` and `f` to `G`.
+   2. Add `p` to `A` and all `f` containing `p` to `G`.
 3. `A` has the smallest subset that satisfies the condition.
