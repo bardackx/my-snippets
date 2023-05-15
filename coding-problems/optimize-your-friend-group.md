@@ -1,4 +1,4 @@
-# Choose your friends wisely
+# Optimize your friend group
 
 ## Problem
 
