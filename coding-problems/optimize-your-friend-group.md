@@ -29,9 +29,17 @@ because then you touch all the friend groups in `F`.
 1. Creating a power set of `P` .
 2. Find the smallest subset `A` that satisfies the condition.
 
-### My solution
+### My slow solution
 1. Initialize `A` as `{}` and `G` as `{}`.
 2. While `A` doesn't satisfy the condition:
    1. Find the `p` from `P - A` that is in the most `f` from `F - G`.
    2. Add `p` to `A` and all `f` containing `p` to `G`.
 3. `A` has the smallest subset that satisfies the condition.
+
+### My solution
+1. Initialize `A` as `{}`, `G` as `{}`, and goal as `|F| * X%`.
+2. Create a map `p2f` of `p` to all `f` of `F` that contains `p`
+3. While `|G| < goal`:
+   1. Find the `p` from `P - A` that is in the most `f` from `p2f[p] - (F - G)` (this is a great optimization).
+   2. Add `p` to `A` and all `f` containing `p` to `G`.
+4. `A` has the smallest subset that satisfies the condition.
