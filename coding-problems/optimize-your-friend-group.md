@@ -11,7 +11,7 @@ F = [{1, 2}, {3, 1, 4}, {4, 1}, {2, 3}, {1}]
 X = 100
 ```
 
-The correct answers could either
+The correct answers could either be
 ```
 {1, 2}
 ```
