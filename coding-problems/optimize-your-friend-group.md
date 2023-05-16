@@ -1,5 +1,8 @@
 # Optimize your friend group
 
+## Warning
+Apparently this is la NP complete :P
+
 ## Problem
 
 From all the persons taken into account `P`, find the smallest set of friends `A`, such that you cover at least one member of `X`% of all the friend groups `F`.
