@@ -52,5 +52,5 @@
     "Temp/": true
   },
   "omnisharp.useModernNet": false,
-  "omnisharp.useEditorFormattingSettings": false,
+  "omnisharp.enableEditorConfigSupport": false
 }
