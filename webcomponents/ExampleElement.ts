@@ -1,5 +1,5 @@
 const sheet = new CSSStyleSheet();
-sheet.replaceSync(`
+sheet.replaceSync(/*css*/`
 :host {
   background: red;
   display: block;
