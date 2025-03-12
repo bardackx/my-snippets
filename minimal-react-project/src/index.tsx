@@ -93,13 +93,17 @@ ReactDOM.createRoot(document.getElementById("root")!).render(<App />);
       <pre className="name">{'./package.json'}</pre>
       <pre className="code">{`...
 "scripts": {
-  "dev": "parcel src/index.html --open"
+  "dev": "parcel src/index.html --dist-dir .parcel-dist --open",
+  "build": "parcel build src/index.html"
 },
 ...
 `}</pre>
     </div>
 
+    <h2>for development run:</h2>
     <pre className="terminal">npm run dev</pre>
+    <h2>for building run:</h2>
+    <pre className="terminal">npm run build</pre>
   </>
 );
 

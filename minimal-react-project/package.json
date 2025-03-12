@@ -2,9 +2,9 @@
   "name": "tatame",
   "version": "1.0.0",
   "description": "",
-  "main": "index.js",
   "scripts": {
-    "dev": "parcel src/index.html --open"
+    "dev": "parcel src/index.html --dist-dir .parcel-dist --open",
+    "build": "parcel build src/index.html"
   },
   "keywords": [],
   "author": "",
