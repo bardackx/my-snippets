@@ -1,4 +1,5 @@
 import * as ReactDOM from "react-dom/client";
+// import './DeleteMe.css'; // In case you wan't to use CSS
 
 const DeleteMe = () => (
   <>
