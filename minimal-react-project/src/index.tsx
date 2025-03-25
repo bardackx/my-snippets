@@ -1,5 +1,10 @@
 import * as ReactDOM from "react-dom/client";
-// import './DeleteMe.css'; // In case you wan't to use CSS
+
+// In case you wan't to use CSS
+// import './styles.css'; 
+
+// In case you wan't to embed an image
+// const exampleSVGURL = new URL('../assets/example.svg', import.meta.url);
 
 const DeleteMe = () => (
   <>
