@@ -3,7 +3,7 @@ Maybe just check https://parceljs.org/recipes/react/ for a more comprehensive ex
 
 ---
 
-# Instructions
+# REACT Instructions
 
 ## Create project
 
@@ -81,4 +81,25 @@ export default ts.config(
     ignores: ["dist/**", "node_modules/**", "*.config.js"],
   }
 );
+```
+
+---
+
+# DENO Instructions
+
+```
+import { Hono } from "jsr:@hono/hono@4.12.15";
+
+const app = new Hono();
+
+app.get("/", (c) => {
+  return c.json({ message: "Hello from Deno 2" });
+});
+
+app.get("/users/:id", (c) => {
+  const id = c.req.param("id");
+  return c.json({ userId: id });
+});
+
+Deno.serve(app.fetch);
 ```
