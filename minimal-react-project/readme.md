@@ -87,7 +87,7 @@ export default ts.config(
 
 # DENO Instructions
 
-```
+```ts
 import { Hono } from "jsr:@hono/hono@4.12.15";
 
 const app = new Hono();
