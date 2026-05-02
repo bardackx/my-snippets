@@ -21,7 +21,7 @@ This tells vscode to trust vite (src/vite-env.d.ts)
 
 ## Consistent formatting
 
-This gives us consistent formatting (you will need this extension https://marketplace.visualstudio.com/items?itemName=dbaeumer.vscode-eslint)
+This gives us consistent formatting (you will need this extension https://marketplace.visualstudio.com/items?itemName=esbenp.prettier-vscode)
 
 ```
 npm install --save-dev prettier
