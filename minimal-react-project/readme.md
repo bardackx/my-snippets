@@ -24,63 +24,34 @@ This tells vscode to trust vite (src/vite-env.d.ts)
 This gives us consistent formatting (you will need this extension https://marketplace.visualstudio.com/items?itemName=dbaeumer.vscode-eslint)
 
 ```
-npm install --save-dev eslint @eslint/js typescript-eslint eslint-plugin-react eslint-plugin-react-hooks globals
+npm install --save-dev prettier
 ```
 
-but you need to create `eslint.config.js`
+Now to configure it create `prettier.config.js`
 
 ```js
-import js from "@eslint/js";
-import ts from "typescript-eslint";
-import react from "eslint-plugin-react";
-import reactHooks from "eslint-plugin-react-hooks";
-import globals from "globals";
+export default {
+  semi: true,
+  singleQuote: true,
+  jsxSingleQuote: false,
+  printWidth: 100,
+  tabWidth: 2,
+  trailingComma: "all",
+};
+```
 
-export default ts.config(
-  js.configs.recommended,
-  ...ts.configs.recommended,
-
-  {
-    files: ["**/*.{ts,tsx}"],
-    plugins: {
-      react,
-      "react-hooks": reactHooks,
-    },
-    languageOptions: {
-      globals: {
-        ...globals.browser,
-        ...globals.es2021,
-      },
-      parserOptions: {
-        ecmaFeatures: { jsx: true },
-        project: "./tsconfig.json", // enables type-aware rules
-      },
-    },
-    settings: {
-      react: { version: "detect" },
-    },
-    rules: {
-      // React
-      ...react.configs.recommended.rules,
-      ...reactHooks.configs.recommended.rules,
-      "react/react-in-jsx-scope": "off",   // not needed with React 17+
-      "react/prop-types": "off",            // TypeScript handles this
-
-      // TypeScript
-      "@typescript-eslint/no-unused-vars": ["warn", { argsIgnorePattern: "^_" }],
-      "@typescript-eslint/no-explicit-any": "warn",
-      "@typescript-eslint/consistent-type-imports": "error",
-
-      // General
-      "no-console": "warn",
-      "max-params": ["warn", 3],
-    },
+Now to tell vscode you want to use prettier for formatting `.vscode/settings.json`
+```json
+{
+  "editor.formatOnSave": true,
+  "editor.defaultFormatter": "esbenp.prettier-vscode",
+  "[typescript]": {
+    "editor.defaultFormatter": "esbenp.prettier-vscode"
   },
-
-  {
-    ignores: ["dist/**", "node_modules/**", "*.config.js"],
+  "[typescriptreact]": {
+    "editor.defaultFormatter": "esbenp.prettier-vscode"
   }
-);
+}
 ```
 
 ## Routing (with wouter, very light)
