@@ -34,7 +34,7 @@ export default {
   semi: true,
   singleQuote: true,
   jsxSingleQuote: false,
-  printWidth: 100,
+  printWidth: 10,
   tabWidth: 2,
   trailingComma: "all",
 };
